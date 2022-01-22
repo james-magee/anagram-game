@@ -5,7 +5,6 @@
  * @param {Set} dictionary
  */
 
-
 const solveAnagram = (anagram, dictionary) => {
   const letters = {};
   anagram.split('').forEach((letter) => {
