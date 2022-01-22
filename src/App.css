@@ -7,25 +7,39 @@ html {
   height: 100%; 
 }
 
+.body-container.down {
+  position: fixed;
+}
+
 .header-container {
-  overflow: hidden;
-  height: 100px;
   background-color: orangered;
   position: fixed;
-  top: 0;
   width: 100%;
+  top: 0;
   display: flex;
-  align-items: center;
+  z-index: 10;
+  height: 120px;
+  transition: 1.7s;
+  align-items: flex-end;
+}
+
+.header-container.down {
+  height: 100%;
 }
 
 .body-container {
   height: 1000px;
   background-color: wheat;
   margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .header-text {
@@ -38,6 +52,7 @@ html {
 
 .larger-text {
   font-size: xx-large;
+  
 }
 
 .smaller-text {
@@ -53,7 +68,39 @@ html {
   color: orangered;
   font-size: large;
   font-weight: bold;
+  transition: 1.7s;
+  display: none;
+}
 
+.play-button.down {
+  display: inline-block;
+}
+
+.play-button:hover {
+  cursor: grab;
+}
+
+.pause-button {
+  /* display: inline-block; */
+  opacity: 1;
+  background-color: wheat;
+  border: none;
+  /* display: inline-block */
+  border-radius: 20px;
+  color: orangered;
+  font-size: large;
+  font-weight: bold;
+  transition: 1.7s;
+}
+
+.pause-button.down {
+  opacity: 0;
+  visibility: hidden;
+  /* display: none; */
+}
+
+.pause-button:hover {
+  cursor: grab;
 }
 
 /* .App {

@@ -1,0 +1,9 @@
+.custom-button:hover {
+  cursor: grab;
+  background-color: brown;
+}
+
+.custom-button {
+  padding: 10px;
+  width: fit-content;
+}
